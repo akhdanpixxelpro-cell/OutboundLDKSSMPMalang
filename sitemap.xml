@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Halaman Utama -->
+  <url>
+    <loc>https://gemilangkatunoutbound.com/</loc>
+    <lastmod>2025-02-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Tentang Kami -->
+  <url>
+    <loc>https://gemilangkatunoutbound.com/about.html</loc>
+    <lastmod>2025-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://gemilangkatunoutbound.com/blog.html</loc>
+    <lastmod>2025-02-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Artikel: 10 Manfaat Outbound LDKS -->
+  <url>
+    <loc>https://gemilangkatunoutbound.com/artikel-manfaat-outbound-ldks.html</loc>
+    <lastmod>2025-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artikel: 5 Permainan Team Building SMP -->
+  <url>
+    <loc>https://gemilangkatunoutbound.com/artikel-team-building-smp.html</loc>
+    <lastmod>2025-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artikel: Panduan Rundown LDKS -->
+  <url>
+    <loc>https://gemilangkatunoutbound.com/artikel-panduan-rundown-ldks.html</loc>
+    <lastmod>2025-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artikel: 7 Lokasi Outbound Malang & Batu -->
+  <url>
+    <loc>https://gemilangkatunoutbound.com/artikel-lokasi-outbound-malang.html</loc>
+    <lastmod>2025-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

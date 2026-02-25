@@ -1,0 +1,13 @@
+# robots.txt — Gemilang Katun Outbound
+# https://gemilangkatunoutbound.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://gemilangkatunoutbound.com/sitemap.xml
+
+# Disallow system/private files
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /.agent/

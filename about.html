@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kami | Gemilang Katun Outbound Malang</title>
+    <meta name="description"
+        content="Kenali lebih dalam Gemilang Katun Outbound — penyedia program outbound dan LDKS terpercaya untuk SMP & SMA di Malang dengan pengalaman 8+ tahun." />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* === ABOUT SPECIFIC === */
+        .about-story {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .about-visual {
+            position: relative;
+        }
+
+        .about-img-main {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #0a2e1a 0%, #0e3a22 50%, #071e10 100%);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-img-main::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 40%, rgba(10, 124, 78, 0.3), transparent 60%);
+        }
+
+        .about-img-float {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 18px 22px;
+            box-shadow: var(--shadow-lg);
+            min-width: 160px;
+        }
+
+        .about-img-float .num {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-light);
+        }
+
+        .about-img-float .lbl {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--text-primary) 50%, var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-text p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .about-checks {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            background: rgba(10, 124, 78, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .check-text {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .check-text strong {
+            color: var(--text-primary);
+        }
+
+        /* Values */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .value-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 20px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            border-color: rgba(10, 124, 78, 0.5);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .value-icon {
+            font-size: 36px;
+            margin-bottom: 14px;
+        }
+
+        .value-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .value-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+
+        /* Team */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .team-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 20px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            border-color: rgba(10, 124, 78, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .team-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: 800;
+            color: #fff;
+            position: relative;
+        }
+
+        .team-avatar::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 50%;
+            border: 2px solid var(--primary);
+            opacity: 0.5;
+        }
+
+        .team-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .team-role {
+            font-size: 13px;
+            color: var(--primary-light);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .team-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Milestones */
+        .milestones {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .milestones::before {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), transparent);
+        }
+
+        .milestone-item {
+            position: relative;
+            margin-bottom: 36px;
+            padding-bottom: 36px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .milestone-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .milestone-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid var(--bg-dark);
+            box-shadow: 0 0 10px var(--glow);
+        }
+
+        .milestone-year {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--primary-light);
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+        }
+
+        .milestone-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .milestone-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+
+        /* Stats bar */
+        .stats-bar {
+            background: linear-gradient(135deg, #0e2e1e, #132b1f);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        .stats-bar-item .num {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--text-primary);
+            line-height: 1;
+        }
+
+        .stats-bar-item .num span {
+            color: var(--primary-light);
+        }
+
+        .stats-bar-item .lbl {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+
+        /* Partners */
+        .partners-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 48px;
+        }
+
+        .partner-badge {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-muted);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .partner-badge:hover {
+            border-color: rgba(10, 124, 78, 0.4);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 960px) {
+            .about-story {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-visual {
+                display: none;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .values-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr 1fr;
+                padding: 24px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-brand">
+            <div class="nav-brand-icon">🏕️</div>
+            <div class="nav-brand-text">
+                <span>Gemilang Katun</span>
+                <span>Outbound Malang</span>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html" class="active">Tentang Kami</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="https://wa.me/6282211221909?text=Halo, saya ingin info paket outbound LDKS" class="nav-cta"
+                    target="_blank" rel="noopener">📞 Hubungi Kami</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">🏠 Beranda</a>
+        <a href="about.html" class="active">🏢 Tentang Kami</a>
+        <a href="blog.html">📰 Blog</a>
+        <a href="https://wa.me/6282211221909" class="mobile-nav-cta" target="_blank" rel="noopener">💬 Hubungi
+            WhatsApp</a>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="page-hero-grid"></div>
+        <div class="page-hero-content" style="max-width:1200px; margin:0 auto; width:100%;">
+            <div class="page-hero-badge">🏢 Tentang Kami</div>
+            <h1>Mengenal Gemilang Katun<br>Outbound Malang</h1>
+            <p>Dengan pengalaman lebih dari 8 tahun, kami telah menjadi mitra terpercaya ratusan sekolah di Malang dan
+                Jawa Timur dalam menyelenggarakan program outbound dan LDKS yang berkesan.</p>
+        </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section style="padding: 0 24px; background: var(--bg-mid);">
+        <div class="container">
+            <div class="about-story">
+                <div class="about-visual">
+                    <div class="about-img-main">🏕️</div>
+                    <div class="about-img-float">
+                        <div class="num">8+ Tahun</div>
+                        <div class="lbl">Melayani Sekolah</div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="section-badge" style="margin-bottom:16px;">📖 Kisah Kami</div>
+                    <h2>Kami Hadir untuk Membentuk Generasi Pemimpin Masa Depan</h2>
+                    <p>Gemilang Katun Outbound berdiri sejak 2016 dengan visi sederhana namun mulia: membantu
+                        sekolah-sekolah di Malang menciptakan pengalaman belajar di luar kelas yang bermakna bagi para
+                        siswa.</p>
+                    <p>Berawal dari sebuah tim kecil yang bersemangat, kini kami telah berkembang menjadi penyedia
+                        outbound dan LDKS terpercaya dengan ratusan program sukses yang telah menyentuh kehidupan lebih
+                        dari 15.000 siswa di Jawa Timur.</p>
+                    <p>Kami percaya bahwa alam adalah ruang kelas terbaik, dan setiap tantangan di luar ruangan adalah
+                        pelajaran berharga yang tidak bisa didapatkan dari buku pelajaran biasa.</p>
+                    <div class="about-checks">
+                        <div class="check-item">
+                            <div class="check-icon">✓</div>
+                            <div class="check-text"><strong>Instruktur Bersertifikat</strong> — Seluruh fasilitator kami
+                                berpengalaman dan tersertifikasi</div>
+                        </div>
+                        <div class="check-item">
+                            <div class="check-icon">✓</div>
+                            <div class="check-text"><strong>Program Terstruktur</strong> — Kurikulum yang dirancang ahli
+                                pendidikan dan psikolog</div>
+                        </div>
+                        <div class="check-item">
+                            <div class="check-icon">✓</div>
+                            <div class="check-text"><strong>Keamanan Terjamin</strong> — Standar keselamatan tertinggi
+                                di setiap aktivitas</div>
+                        </div>
+                        <div class="check-item">
+                            <div class="check-icon">✓</div>
+                            <div class="check-text"><strong>Harga Transparan</strong> — Tidak ada biaya tersembunyi,
+                                semua sudah inklusif</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section style="padding: 0 24px 80px; background: var(--bg-mid);">
+        <div class="container">
+            <div class="stats-bar">
+                <div class="stats-bar-item">
+                    <div class="num">200<span>+</span></div>
+                    <div class="lbl">Sekolah Bergabung</div>
+                </div>
+                <div class="stats-bar-item">
+                    <div class="num">15K<span>+</span></div>
+                    <div class="lbl">Siswa Terlatih</div>
+                </div>
+                <div class="stats-bar-item">
+                    <div class="num">8<span>+</span></div>
+                    <div class="lbl">Tahun Pengalaman</div>
+                </div>
+                <div class="stats-bar-item">
+                    <div class="num">4.9<span>★</span></div>
+                    <div class="lbl">Rating Kepuasan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUES -->
+    <section style="padding: 80px 24px; background: var(--bg-dark);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">💎 Nilai Kami</div>
+                <h2 class="section-title">Fondasi yang Kami Pegang Teguh</h2>
+                <p class="section-sub">Empat nilai utama yang menjadi landasan setiap program yang kami selenggarakan
+                </p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <div class="value-title">Integritas</div>
+                    <div class="value-desc">Jujur dan transparan dalam setiap aspek layanan, dari perencanaan hingga
+                        pelaksanaan program.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🛡️</div>
+                    <div class="value-title">Keamanan</div>
+                    <div class="value-desc">Keselamatan peserta adalah prioritas nomor satu yang tidak pernah kami
+                        kompromikan.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">⭐</div>
+                    <div class="value-title">Kualitas</div>
+                    <div class="value-desc">Setiap program dirancang dengan standar kualitas tinggi untuk memberikan
+                        pengalaman terbaik.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌱</div>
+                    <div class="value-title">Dampak</div>
+                    <div class="value-desc">Setiap kegiatan dirancang untuk memberikan dampak positif nyata bagi
+                        perkembangan siswa.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section style="padding: 80px 24px; background: linear-gradient(180deg, var(--bg-dark), var(--bg-mid));">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">👥 Tim Kami</div>
+                <h2 class="section-title">Dibalik Setiap Program yang Berkesan</h2>
+                <p class="section-sub">Tim profesional berpengalaman yang berdedikasi penuh untuk kesuksesan program
+                    Anda</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar" style="background: linear-gradient(135deg, #0a7c4e, #12a868);">A</div>
+                    <div class="team-name">Ahmad Rizky</div>
+                    <div class="team-role">Founder & Lead Trainer</div>
+                    <div class="team-desc">8+ tahun pengalaman dalam outbound dan pengembangan SDM. Bersertifikat
+                        trainer nasional.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar" style="background: linear-gradient(135deg, #1a6b3a, #2d9a5c);">S</div>
+                    <div class="team-name">Sari Wulandari</div>
+                    <div class="team-role">Program Director</div>
+                    <div class="team-desc">Psikolog pendidikan yang merancang kurikulum program untuk perkembangan
+                        optimal siswa.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar" style="background: linear-gradient(135deg, #7c5a0a, #c48d1a);">B</div>
+                    <div class="team-name">Budi Santoso</div>
+                    <div class="team-role">Head of Safety</div>
+                    <div class="team-desc">Ahli keselamatan outdoor bersertifikat yang memastikan setiap aktivitas aman
+                        dan berstandar tinggi.</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar" style="background: linear-gradient(135deg, #0a4a7c, #1a72c4);">R</div>
+                    <div class="team-name">Ratna Kusuma</div>
+                    <div class="team-role">Operations Manager</div>
+                    <div class="team-desc">Memastikan kelancaran logistik dan koordinasi setiap program dari persiapan
+                        hingga evaluasi.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOURNEY / MILESTONES -->
+    <section style="padding: 80px 24px; background: var(--bg-mid);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🗓️ Perjalanan Kami</div>
+                <h2 class="section-title">Tonggak Sejarah Gemilang Katun</h2>
+                <p class="section-sub">Dari langkah kecil menuju dampak besar bagi dunia pendidikan Malang</p>
+            </div>
+            <div style="max-width: 680px; margin: 0 auto;">
+                <div class="milestones">
+                    <div class="milestone-item">
+                        <div class="milestone-year">2016</div>
+                        <div class="milestone-title">Berdirinya Gemilang Katun Outbound</div>
+                        <div class="milestone-desc">Berawal dari tim 5 orang yang bersemangat, kami menyelenggarakan
+                            program outbound pertama untuk SMAN 1 Malang dengan 80 peserta.</div>
+                    </div>
+                    <div class="milestone-item">
+                        <div class="milestone-year">2017 – 2018</div>
+                        <div class="milestone-title">Ekspansi ke 50+ Sekolah Pertama</div>
+                        <div class="milestone-desc">Kepercayaan terus bertambah. Kami berhasil melayani lebih dari 50
+                            sekolah dengan rating kepuasan di atas 4.7 bintang.</div>
+                    </div>
+                    <div class="milestone-item">
+                        <div class="milestone-year">2019</div>
+                        <div class="milestone-title">Sertifikasi Nasional & Penghargaan</div>
+                        <div class="milestone-desc">Seluruh tim fasilitator mendapatkan sertifikasi nasional. Kami
+                            menerima penghargaan sebagai "Penyedia Outbound Terbaik Jawa Timur".</div>
+                    </div>
+                    <div class="milestone-item">
+                        <div class="milestone-year">2021 – 2022</div>
+                        <div class="milestone-title">Adaptasi di Era Pandemi & Bangkit Kembali</div>
+                        <div class="milestone-desc">Mengembangkan format hybrid outbound dan virtual team building. Saat
+                            pandemi mereda, kami bangkit lebih kuat dengan protokol kesehatan ketat.</div>
+                    </div>
+                    <div class="milestone-item">
+                        <div class="milestone-year">2024 – Sekarang</div>
+                        <div class="milestone-title">Melayani 200+ Sekolah dan 15.000+ Siswa</div>
+                        <div class="milestone-desc">Kini kami adalah pilihan utama ratusan sekolah SMP, SMA, dan SMK di
+                            Malang dan sekitarnya. Terus berinovasi demi pengalaman terbaik.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section style="padding: 80px 24px; background: var(--bg-dark);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🏫 Sekolah Mitra</div>
+                <h2 class="section-title">Dipercaya Oleh Ratusan Sekolah</h2>
+                <p class="section-sub">Bergabunglah bersama ratusan sekolah yang telah merasakan manfaat program kami
+                </p>
+            </div>
+            <div class="partners-row">
+                <div class="partner-badge">🏫 SMAN 1 Malang</div>
+                <div class="partner-badge">🏫 SMAN 3 Malang</div>
+                <div class="partner-badge">🏫 SMAN 5 Malang</div>
+                <div class="partner-badge">🏫 SMPN 2 Malang</div>
+                <div class="partner-badge">🏫 SMPN 3 Batu</div>
+                <div class="partner-badge">🏫 SMKN 2 Malang</div>
+                <div class="partner-badge">🏫 MAN 1 Malang</div>
+                <div class="partner-badge">🏫 SMA Taman Siswa</div>
+                <div class="partner-badge">🏫 SMP Islam Sabilillah</div>
+                <div class="partner-badge">🏫 + 190 Sekolah Lainnya</div>
+            </div>
+            <div style="text-align:center; margin-top: 48px;">
+                <a href="https://wa.me/6282211221909?text=Halo, saya ingin konsultasi paket outbound LDKS untuk sekolah kami"
+                    class="btn btn-primary" target="_blank" rel="noopener">💬 Jadikan Sekolah Anda Mitra Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-brand" style="text-decoration:none;">
+                        <div class="nav-brand-icon">🏕️</div>
+                        <div class="nav-brand-text">
+                            <span>Gemilang Katun Outbound</span>
+                            <span>Outbound & LDKS Malang</span>
+                        </div>
+                    </a>
+                    <p>Penyedia program outbound dan LDKS terpercaya untuk SMP & SMA di Malang. Membentuk generasi muda
+                        yang berkarakter dan berjiwa pemimpin.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" aria-label="Instagram">📷</a>
+                        <a href="https://wa.me/6282211221909" class="footer-social-link" aria-label="WhatsApp"
+                            target="_blank" rel="noopener">💬</a>
+                        <a href="#" class="footer-social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="footer-social-link" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Program</h4>
+                    <ul>
+                        <li><a href="#">Outbound SMP</a></li>
+                        <li><a href="#">LDKS SMA</a></li>
+                        <li><a href="#">Team Building</a></li>
+                        <li><a href="#">Survival Camp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><a href="tel:+6282211221909">📞 0822-1122-1909</a></li>
+                        <li><a href="https://wa.me/6282211221909" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+                        <li><a href="#">📍 Malang, Jawa Timur</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Gemilang Katun Outbound. Dibuat dengan <span>❤️</span> di Malang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <a href="https://wa.me/6282211221909?text=Halo! Saya ingin info paket outbound LDKS"
+            class="float-btn float-btn-wa" title="Chat WhatsApp" aria-label="Chat WhatsApp" target="_blank"
+            rel="noopener">💬</a>
+        <button class="float-btn float-btn-top" id="scrollTop" title="Kembali ke atas" aria-label="Kembali ke atas"
+            onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+    </div>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+        });
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>

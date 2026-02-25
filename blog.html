@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Outbound LDKS Malang | Tips &amp; Inspirasi Pendidikan</title>
+    <meta name="description"
+        content="Baca artikel terbaru seputar outbound LDKS, tips kepemimpinan untuk siswa SMP SMA, dan inspirasi program pendidikan di Malang." />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .blog-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .blog-featured {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 32px;
+            transition: var(--transition);
+        }
+
+        .blog-featured:hover {
+            border-color: rgba(10, 124, 78, 0.5);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .featured-img {
+            height: 260px;
+            background: linear-gradient(135deg, #0a2e1a, #0e3a22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-img::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(19, 43, 31, 0.9) 0%, transparent 60%);
+        }
+
+        .featured-tag {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            padding: 5px 14px;
+            background: var(--primary);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 100px;
+            letter-spacing: 0.5px;
+        }
+
+        .featured-body {
+            padding: 28px;
+        }
+
+        .featured-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+        .featured-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .featured-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.35;
+            margin-bottom: 12px;
+            transition: var(--transition);
+        }
+
+        .blog-featured:hover .featured-title {
+            color: var(--primary-light);
+        }
+
+        .featured-excerpt {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.75;
+            margin-bottom: 20px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 48px;
+        }
+
+        .blog-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            border-color: rgba(10, 124, 78, 0.45);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .blog-card-img {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            position: relative;
+        }
+
+        .blog-card-img-tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 100px;
+            color: #fff;
+            letter-spacing: 0.3px;
+        }
+
+        .blog-card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card-meta {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .blog-card-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.45;
+            margin-bottom: 8px;
+            transition: var(--transition);
+        }
+
+        .blog-card:hover .blog-card-title {
+            color: var(--primary-light);
+        }
+
+        .blog-card-excerpt {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.65;
+            flex: 1;
+            margin-bottom: 16px;
+        }
+
+        .read-more {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--primary-light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .read-more:hover {
+            gap: 8px;
+            color: var(--accent);
+        }
+
+        .pagination {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .page-btn {
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .page-btn:hover,
+        .page-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            position: sticky;
+            top: 90px;
+        }
+
+        .sidebar-cta {
+            background: linear-gradient(135deg, #0e2e1e, #0a4028);
+            border: 1px solid rgba(10, 124, 78, 0.4);
+            border-radius: var(--radius);
+            padding: 24px;
+            text-align: center;
+        }
+
+        .sidebar-cta p {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .sidebar-cta small {
+            font-size: 13px;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 1024px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px 20px 60px;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .featured-img {
+                height: 220px;
+            }
+
+            .blog-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 760px) {
+            .blog-layout {
+                padding: 32px 16px 52px;
+            }
+
+            .featured-img {
+                height: 180px;
+                font-size: 64px;
+            }
+
+            .featured-title {
+                font-size: 18px;
+            }
+
+            .featured-excerpt {
+                font-size: 13px;
+            }
+
+            .featured-body {
+                padding: 20px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+            }
+
+            .blog-card-img {
+                height: 130px;
+                font-size: 40px;
+            }
+
+            .blog-card-body {
+                padding: 16px;
+            }
+
+            .blog-card-title {
+                font-size: 13px;
+            }
+
+            .blog-card-excerpt {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-layout {
+                padding: 24px 14px 44px;
+                gap: 28px;
+            }
+
+            .featured-img {
+                height: 160px;
+                font-size: 56px;
+            }
+
+            .featured-meta {
+                gap: 10px;
+                font-size: 12px;
+                flex-wrap: wrap;
+            }
+
+            .featured-title {
+                font-size: 17px;
+                line-height: 1.3;
+            }
+
+            .featured-body {
+                padding: 18px 16px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .blog-card {
+                flex-direction: row;
+            }
+
+            .blog-card-img {
+                width: 100px;
+                min-width: 100px;
+                height: auto;
+                min-height: 112px;
+                font-size: 36px;
+                border-radius: 0;
+            }
+
+            .blog-card-body {
+                padding: 14px;
+            }
+
+            .blog-card-title {
+                font-size: 13px;
+                line-height: 1.4;
+                margin-bottom: 6px;
+            }
+
+            .blog-card-excerpt {
+                display: none;
+            }
+
+            .sidebar-cta {
+                padding: 20px 16px;
+            }
+
+            .sidebar-cta p {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .blog-layout {
+                padding: 20px 12px 36px;
+            }
+
+            .featured-img {
+                height: 140px;
+            }
+
+            .featured-title {
+                font-size: 15px;
+            }
+
+            .blog-card-img {
+                width: 88px;
+                min-width: 88px;
+            }
+
+            .blog-card-title {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-brand">
+            <div class="nav-brand-icon">&#x1F3D5;&#xFE0F;</div>
+            <div class="nav-brand-text">
+                <span>Gemilang Katun</span>
+                <span>Outbound Malang</span>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="https://wa.me/6282211221909?text=Halo, saya ingin info paket outbound LDKS" class="nav-cta"
+                    target="_blank" rel="noopener">Hubungi Kami</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Tentang Kami</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="https://wa.me/6282211221909" class="mobile-nav-cta" target="_blank" rel="noopener">Hubungi WhatsApp</a>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="page-hero-grid"></div>
+        <div class="page-hero-content" style="max-width:1200px; margin:0 auto; width:100%;">
+            <div class="page-hero-badge">Blog &amp; Artikel</div>
+            <h1>Inspirasi &amp; Tips<br>Outbound LDKS</h1>
+            <p>Pelajari tips kepemimpinan, inspirasi kegiatan outbound, dan panduan LDKS terbaik untuk siswa SMP &amp;
+                SMA di Malang.</p>
+        </div>
+    </section>
+
+    <!-- BLOG LAYOUT -->
+    <div class="blog-layout">
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- FEATURED -->
+            <div class="blog-featured">
+                <div class="featured-img" style="background: linear-gradient(135deg, #0a2e1a, #0d3a1e);">
+                    <span class="featured-tag">Unggulan</span>
+                    &#x1F3D5;&#xFE0F;
+                </div>
+                <div class="featured-body">
+                    <div class="featured-meta">
+                        <span>20 Februari 2025</span>
+                        <span>Tim Gemilang Katun</span>
+                        <span>8 menit baca</span>
+                        <span class="badge badge-green">Kepemimpinan</span>
+                    </div>
+                    <div class="featured-title">10 Manfaat Outbound LDKS yang Terbukti Membentuk Karakter Siswa SMA
+                    </div>
+                    <p class="featured-excerpt">Program LDKS (Latihan Dasar Kepemimpinan Siswa) melalui outbound bukan
+                        sekadar kesenangan di alam terbuka. Di balik setiap tantangan tali, flying fox, dan permainan
+                        kelompok tersimpan ribuan manfaat psikologis, sosial, dan emosional yang membentuk karakter
+                        generasi muda untuk siap menghadapi dunia.</p>
+                    <a href="artikel-manfaat-outbound-ldks.html" class="btn btn-primary"
+                        style="padding:10px 22px; font-size:14px;">Baca Selengkapnya</a>
+                </div>
+            </div>
+
+            <!-- ARTICLE GRID -->
+            <h3
+                style="font-size:16px; font-weight:700; color:var(--text-muted); letter-spacing:0.5px; text-transform:uppercase; margin-bottom:20px;">
+                Artikel Terbaru</h3>
+            <div class="blog-grid">
+
+                <div class="blog-card">
+                    <div class="blog-card-img" style="background: linear-gradient(135deg, #1a2e10, #2a4a18);">
+                        <span class="blog-card-img-tag" style="background:#0a7c4e;">Team Building</span>
+                        &#x1F91D;
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span>15 Feb 2025</span>
+                            <span>6 mnt baca</span>
+                        </div>
+                        <div class="blog-card-title">5 Permainan Team Building Terbaik untuk Siswa SMP agar Kompak dan
+                            Solid</div>
+                        <p class="blog-card-excerpt">Kumpulan permainan seru yang efektif membangun kerjasama dan
+                            kepercayaan antar siswa SMP dalam waktu singkat.</p>
+                        <a href="artikel-team-building-smp.html" class="read-more">Baca Artikel &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-card-img" style="background: linear-gradient(135deg, #2e1e0e, #4a2e10);">
+                        <span class="blog-card-img-tag" style="background:#d9a030;">Tips LDKS</span>
+                        &#x1F396;&#xFE0F;
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span>10 Feb 2025</span>
+                            <span>5 mnt baca</span>
+                        </div>
+                        <div class="blog-card-title">Panduan Lengkap Menyusun Rundown LDKS yang Efektif dan Menyenangkan
+                        </div>
+                        <p class="blog-card-excerpt">Langkah demi langkah menyusun jadwal LDKS yang terstruktur,
+                            efektif, dan tetap mengasyikkan bagi seluruh peserta.</p>
+                        <a href="artikel-panduan-rundown-ldks.html" class="read-more">Baca Artikel &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-card-img" style="background: linear-gradient(135deg, #0e1a2e, #102040);">
+                        <span class="blog-card-img-tag" style="background:#1a72c4;">Lokasi</span>
+                        &#x1F304;
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span>5 Feb 2025</span>
+                            <span>7 mnt baca</span>
+                        </div>
+                        <div class="blog-card-title">7 Lokasi Outbound Terbaik di Malang &amp; Batu untuk Kegiatan
+                            Sekolah 2025</div>
+                        <p class="blog-card-excerpt">Rekomendasi tempat outbound terbaik di sekitar Malang dan Batu yang
+                            aman, nyaman, dan berkesan untuk siswa sekolah.</p>
+                        <a href="artikel-lokasi-outbound-malang.html" class="read-more">Baca Artikel &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-cta">
+                <div style="font-size:36px; margin-bottom:10px;">&#x1F4AC;</div>
+                <p>Konsultasi Program LDKS?</p>
+                <small>Chat langsung dengan tim kami, gratis!</small>
+                <a href="https://wa.me/6282211221909?text=Halo! Saya ingin tanya tentang program outbound LDKS"
+                    class="btn btn-accent" style="width:100%; justify-content:center;" target="_blank" rel="noopener">
+                    Chat WhatsApp Sekarang
+                </a>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-brand" style="text-decoration:none;">
+                        <div class="nav-brand-icon">&#x1F3D5;&#xFE0F;</div>
+                        <div class="nav-brand-text">
+                            <span>Gemilang Katun Outbound</span>
+                            <span>Outbound &amp; LDKS Malang</span>
+                        </div>
+                    </a>
+                    <p>Penyedia program outbound dan LDKS terpercaya untuk SMP &amp; SMA di Malang. Membentuk generasi
+                        muda yang berkarakter dan berjiwa pemimpin.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" aria-label="Instagram">&#x1F4F7;</a>
+                        <a href="https://wa.me/6282211221909" class="footer-social-link" aria-label="WhatsApp"
+                            target="_blank" rel="noopener">&#x1F4AC;</a>
+                        <a href="#" class="footer-social-link" aria-label="Facebook">&#x1F4D8;</a>
+                        <a href="#" class="footer-social-link" aria-label="YouTube">&#x25B6;&#xFE0F;</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Program</h4>
+                    <ul>
+                        <li><a href="#">Outbound SMP</a></li>
+                        <li><a href="#">LDKS SMA</a></li>
+                        <li><a href="#">Team Building</a></li>
+                        <li><a href="#">Survival Camp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><a href="tel:+6282211221909">0822-1122-1909</a></li>
+                        <li><a href="https://wa.me/6282211221909" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><a href="#">Malang, Jawa Timur</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gemilang Katun Outbound. Dibuat dengan <span>&#x2764;&#xFE0F;</span> di Malang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/6282211221909?text=Halo! Saya ingin info paket outbound LDKS"
+            class="float-btn float-btn-wa" title="Chat WhatsApp" aria-label="Chat WhatsApp" target="_blank"
+            rel="noopener">&#x1F4AC;</a>
+        <button class="float-btn float-btn-top" id="scrollTop" title="Kembali ke atas" aria-label="Kembali ke atas"
+            onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+    </div>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+        });
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outbound LDKS SMP & SMA Malang | Gemilang Katun Outbound</title>
+    <meta name="description"
+        content="Paket Outbound LDKS terbaik untuk SMP & SMA di Malang. Program kepemimpinan, team building, dan petualangan alam yang menyenangkan dan berkesan. Hubungi kami sekarang!" />
+    <meta name="keywords"
+        content="outbound LDKS Malang, outbound SMP SMA Malang, team building Malang, outbound sekolah Malang, LDKS Malang" />
+    <meta property="og:title" content="Outbound LDKS SMP & SMA Malang | Gemilang Katun Outbound" />
+    <meta property="og:description"
+        content="Paket Outbound LDKS terbaik untuk SMP & SMA di Malang. Program kepemimpinan dan petualangan alam yang berkesan." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Gemilang Katun Outbound",
+    "description": "Penyedia paket outbound LDKS untuk SMP dan SMA di Malang",
+    "address": { "@type": "PostalAddress", "addressLocality": "Malang", "addressRegion": "Jawa Timur" },
+    "telephone": "+62822-1122-1909",
+    "url": "https://gemilangkatunoutbound.com"
+  }
+  </script>
+    <style>
+        /* === HERO === */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 24px 60px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #07120e 0%, #0a1f14 40%, #07120e 100%);
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 60% at 10% 50%, rgba(10, 124, 78, 0.22) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 50% at 90% 20%, rgba(244, 185, 66, 0.12) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 60% at 60% 80%, rgba(10, 124, 78, 0.1) 0%, transparent 60%);
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(10, 124, 78, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(10, 124, 78, 0.07) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .hero-orbs {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: rgba(10, 124, 78, 0.15);
+            top: -100px;
+            right: -100px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: rgba(244, 185, 66, 0.08);
+            bottom: -50px;
+            left: 30%;
+            animation-delay: 3s;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-left {
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 16px;
+            background: rgba(10, 124, 78, 0.2);
+            border: 1px solid rgba(10, 124, 78, 0.45);
+            border-radius: 100px;
+            font-size: 13px;
+            color: #12a868;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: 0.4px;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #12a868;
+            border-radius: 50%;
+            animation: pulse-glow 2s infinite;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 800;
+            line-height: 1.18;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 .line-main {
+            background: linear-gradient(135deg, #eef5f0, #12a868);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero h1 .line-accent {
+            color: #f4b942;
+            -webkit-text-fill-color: #f4b942;
+        }
+
+        .hero-desc {
+            font-size: 17px;
+            color: #8db89e;
+            margin-bottom: 36px;
+            line-height: 1.75;
+            max-width: 500px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 28px;
+            margin-top: 48px;
+            padding-top: 36px;
+            border-top: 1px solid rgba(10, 124, 78, 0.2);
+        }
+
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-num {
+            font-size: 28px;
+            font-weight: 800;
+            color: #eef5f0;
+            line-height: 1;
+        }
+
+        .stat-num span {
+            color: #12a868;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #8db89e;
+            margin-top: 4px;
+        }
+
+        /* Hero Visual Card */
+        .hero-right {
+            display: flex;
+            justify-content: center;
+            animation: fadeUp 0.8s 0.3s ease both;
+        }
+
+        .hero-visual {
+            width: 100%;
+            max-width: 480px;
+            position: relative;
+        }
+
+        .hero-card-main {
+            background: rgba(19, 43, 31, 0.9);
+            border: 1px solid rgba(10, 124, 78, 0.3);
+            border-radius: 24px;
+            padding: 32px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 40px rgba(10, 124, 78, 0.12);
+        }
+
+        .hero-card-img {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #0e2e1e, #0a4028);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card-img::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10, 124, 78, 0.3), transparent 60%);
+        }
+
+        .hero-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .hero-tag {
+            padding: 5px 12px;
+            background: rgba(10, 124, 78, 0.18);
+            border: 1px solid rgba(10, 124, 78, 0.3);
+            border-radius: 100px;
+            font-size: 12px;
+            color: #12a868;
+            font-weight: 600;
+        }
+
+        .hero-card-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #eef5f0;
+            margin-bottom: 8px;
+        }
+
+        .hero-card-sub {
+            font-size: 14px;
+            color: #8db89e;
+            margin-bottom: 20px;
+        }
+
+        .hero-card-price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .price-val {
+            font-size: 24px;
+            font-weight: 800;
+            color: #f4b942;
+        }
+
+        .price-val small {
+            font-size: 12px;
+            color: #8db89e;
+            font-weight: 400;
+            display: block;
+            margin-top: -2px;
+        }
+
+        .floating-badge {
+            position: absolute;
+            top: -16px;
+            right: -16px;
+            background: linear-gradient(135deg, #f4b942, #d9a030);
+            color: #000;
+            padding: 10px 16px;
+            border-radius: 14px;
+            font-size: 13px;
+            font-weight: 700;
+            box-shadow: 0 8px 24px rgba(244, 185, 66, 0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* === PROGRAMS === */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .program-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: var(--transition);
+            cursor: default;
+        }
+
+        .program-card:hover {
+            border-color: rgba(10, 124, 78, 0.5);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 25px rgba(10, 124, 78, 0.1);
+        }
+
+        .program-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(10, 124, 78, 0.2), rgba(10, 124, 78, 0.05));
+            border: 1px solid rgba(10, 124, 78, 0.3);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+
+        .program-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .program-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+
+        /* === GALLERY SECTION === */
+        .gallery-section {
+            padding: 80px 24px;
+            background: linear-gradient(180deg, var(--bg-dark), var(--bg-mid), var(--bg-dark));
+        }
+
+        .gallery-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            gap: 16px;
+            margin-top: 48px;
+        }
+
+        .gallery-item {
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .gallery-item::after {
+            content: attr(data-label);
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(7, 18, 14, 0.9) 0%, transparent 50%);
+            display: flex;
+            align-items: flex-end;
+            padding: 14px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #eef5f0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            border-color: rgba(10, 124, 78, 0.5);
+        }
+
+        .gallery-item.big {
+            grid-column: span 2;
+            grid-row: span 2;
+            font-size: 80px;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+        }
+
+        .g1 {
+            background: linear-gradient(135deg, #0e2e1e, #0a4028);
+        }
+
+        .g2 {
+            background: linear-gradient(135deg, #1a2e10, #2a4a18);
+        }
+
+        .g3 {
+            background: linear-gradient(135deg, #2e1e0e, #4a2e10);
+        }
+
+        .g4 {
+            background: linear-gradient(135deg, #0e1a2e, #102040);
+        }
+
+        .g5 {
+            background: linear-gradient(135deg, #1e0e2e, #2e1040);
+        }
+
+        .g6 {
+            background: linear-gradient(135deg, #0e2e2e, #0a3a3a);
+        }
+
+        /* === TESTIMONIALS === */
+        .testi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testi-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .testi-card:hover {
+            border-color: rgba(10, 124, 78, 0.4);
+            transform: translateY(-4px);
+        }
+
+        .testi-quote {
+            font-size: 40px;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 12px;
+            font-family: serif;
+        }
+
+        .testi-text {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.75;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testi-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testi-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            font-weight: 700;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .testi-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .testi-school {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .stars {
+            color: #f4b942;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        /* === CTA === */
+        .cta-section {
+            padding: 80px 24px;
+            background: linear-gradient(180deg, var(--bg-dark) 0%, #0a1f14 50%, var(--bg-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(10, 124, 78, 0.15), transparent 70%);
+        }
+
+        .cta-inner {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-inner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #eef5f0, #12a868);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-inner p {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 36px;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* === FAQ === */
+        .faq-list {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item.open {
+            border-color: rgba(10, 124, 78, 0.4);
+        }
+
+        .faq-q {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 24px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            gap: 16px;
+            user-select: none;
+        }
+
+        .faq-q:hover {
+            color: var(--primary-light);
+        }
+
+        .faq-icon {
+            width: 28px;
+            height: 28px;
+            background: rgba(10, 124, 78, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: var(--primary-light);
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+            background: rgba(10, 124, 78, 0.3);
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 24px;
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+
+        .faq-item.open .faq-a {
+            max-height: 200px;
+            padding: 0 24px 20px;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 900px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-right {
+                display: none;
+            }
+
+            .hero-left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-desc {
+                max-width: 100%;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .testi-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+
+            .gallery-item.big {
+                grid-column: span 2;
+                height: 240px;
+            }
+
+            .gallery-item.tall {
+                grid-row: span 1;
+            }
+
+            .hero {
+                padding: 100px 20px 60px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 88px 16px 52px;
+            }
+
+            .hero h1 {
+                font-size: clamp(2rem, 8vw, 2.8rem);
+            }
+
+            .hero-desc {
+                font-size: 15px;
+            }
+
+            .hero-badge {
+                font-size: 12px;
+                padding: 6px 14px;
+            }
+
+            .hero-stats {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .stat-num {
+                font-size: 22px;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testi-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-item.big {
+                height: 180px;
+                font-size: 56px;
+            }
+
+            .cta-section {
+                padding: 60px 16px;
+            }
+
+            .cta-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .faq-q {
+                font-size: 14px;
+                padding: 16px 18px;
+            }
+
+            .gallery-section {
+                padding: 60px 16px;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .hero {
+                padding: 80px 14px 44px;
+            }
+
+            .hero h1 {
+                font-size: 1.85rem;
+            }
+
+            .hero-desc {
+                font-size: 14px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .hero-actions .btn {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .hero-stats {
+                gap: 12px;
+            }
+
+            .stat-num {
+                font-size: 20px;
+            }
+
+            .stat-label {
+                font-size: 11px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.big {
+                height: 200px;
+                grid-column: auto;
+            }
+
+            .programs-grid {
+                gap: 14px;
+            }
+
+            .program-card {
+                padding: 22px 18px;
+            }
+
+            .testi-card {
+                padding: 20px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-brand">
+            <div class="nav-brand-icon">🏕️</div>
+            <div class="nav-brand-text">
+                <span>Gemilang Katun</span>
+                <span>Outbound Malang</span>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Beranda</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="https://wa.me/6282211221909?text=Halo, saya ingin info paket outbound LDKS" class="nav-cta"
+                    target="_blank" rel="noopener">📞 Hubungi Kami</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="active">🏠 Beranda</a>
+        <a href="about.html">🏢 Tentang Kami</a>
+        <a href="blog.html">📰 Blog</a>
+        <a href="https://wa.me/6282211221909?text=Halo, saya ingin info paket outbound LDKS" class="mobile-nav-cta"
+            target="_blank" rel="noopener">💬 Hubungi WhatsApp</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-badge">⭐ #1 Outbound LDKS di Malang</div>
+                <h1>
+                    <span class="line-main">Outbound & LDKS</span><br>
+                    <span class="line-accent">SMP & SMA</span><br>
+                    <span class="line-main">Malang</span>
+                </h1>
+                <p class="hero-desc">Program outbound dan LDKS eksklusif untuk siswa SMP & SMA. Bangun karakter, jiwa
+                    kepemimpinan, dan teamwork melalui petualangan alam yang mendebarkan di Kota Malang.</p>
+                <div class="hero-actions">
+                    <a href="https://wa.me/6282211221909?text=Halo, saya ingin info paket outbound LDKS SMP SMA di Malang"
+                        class="btn btn-primary" target="_blank" rel="noopener">💬 Konsultasi Gratis</a>
+                    <a href="about.html" class="btn btn-outline">Pelajari Lebih →</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-num">200<span>+</span></div>
+                        <div class="stat-label">Sekolah Bergabung</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">15K<span>+</span></div>
+                        <div class="stat-label">Siswa Terlatih</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">8<span>+</span></div>
+                        <div class="stat-label">Tahun Pengalaman</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">4.9<span>★</span></div>
+                        <div class="stat-label">Rating Kepuasan</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-visual">
+                    <div class="hero-card-main">
+                        <div class="floating-badge">🔥 Paket Terlaris!</div>
+                        <div class="hero-card-img">🏕️</div>
+                        <div class="hero-card-tags">
+                            <span class="hero-tag">LDKS</span>
+                            <span class="hero-tag">Kepemimpinan</span>
+                            <span class="hero-tag">Team Building</span>
+                        </div>
+                        <div class="hero-card-title">Paket LDKS Premium SMA</div>
+                        <div class="hero-card-sub">2 Hari 1 Malam · Batu Malang · Semua Fasilitas</div>
+                        <div class="hero-card-price">
+                            <div class="price-val">
+                                Rp 185K
+                                <small>/ siswa (min. 30 orang)</small>
+                            </div>
+                            <a href="https://wa.me/6282211221909" class="btn btn-accent" target="_blank" rel="noopener"
+                                style="padding: 10px 18px; font-size:13px;">Pesan →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section style="padding: 80px 24px; background: linear-gradient(180deg, var(--bg-dark), var(--bg-mid));">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🎯 Program Unggulan</div>
+                <h2 class="section-title">Aktivitas Outbound LDKS</h2>
+                <p class="section-sub">Berbagai program dirancang khusus untuk membentuk karakter dan kepemimpinan siswa
+                    SMP & SMA</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">🎖️</div>
+                    <h3>Latihan Kepemimpinan</h3>
+                    <p>Program LDKS intensif yang melatih siswa menjadi pemimpin yang tangguh, bertanggung jawab, dan
+                        berintegritas tinggi.</p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">🤝</div>
+                    <h3>Team Building</h3>
+                    <p>Permainan dan tantangan kelompok yang membangun kerjasama, komunikasi, dan kepercayaan antar
+                        anggota tim.</p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">🧗</div>
+                    <h3>Flying Fox & High Ropes</h3>
+                    <p>Wahana tantangan ketinggian yang melatih keberanian, kepercayaan diri, dan kemampuan mengatasi
+                        rasa takut.</p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">🌿</div>
+                    <h3>Jungle Tracking</h3>
+                    <p>Penjelajahan alam hutan yang melatih ketahanan fisik, kepekaan lingkungan, dan kemampuan navigasi
+                        alam.</p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">🏕️</div>
+                    <h3>Survival Camp</h3>
+                    <p>Kegiatan berkemah dan survival skills yang mengajarkan kemandirian, kreativitas, dan problem
+                        solving di alam bebas.</p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">🎤</div>
+                    <h3>Ice Breaking & Motivasi</h3>
+                    <p>Sesi motivasi dan ice breaking energetik yang meningkatkan semangat, kepercayaan diri, dan jiwa
+                        korsa siswa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section">
+        <div style="max-width:1200px; margin:0 auto;">
+            <div class="section-header">
+                <div class="section-badge">📸 Galeri</div>
+                <h2 class="section-title">Momen Berkesan Peserta</h2>
+                <p class="section-sub">Ribuan siswa telah merasakan pengalaman luar biasa bersama kami</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item big g1" data-label="🏕️ Jungle Camp — Batu Malang">🏕️</div>
+                <div class="gallery-item g2" data-label="🎖️ Upacara LDKS">🎖️</div>
+                <div class="gallery-item g3" data-label="🧗 High Ropes Challenge">🧗</div>
+                <div class="gallery-item tall g4" data-label="🤝 Team Building Game">🤝</div>
+                <div class="gallery-item g5" data-label="🌿 Jungle Tracking">🌿</div>
+                <div class="gallery-item g6" data-label="🎤 Sesi Motivasi">🎤</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section style="padding: 80px 24px; background: var(--bg-dark);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">💬 Testimoni</div>
+                <h2 class="section-title">Kata Mereka Tentang Kami</h2>
+                <p class="section-sub">Kepercayaan ratusan sekolah di Malang dan sekitarnya</p>
+            </div>
+            <div class="testi-grid">
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="testi-quote">"</div>
+                    <p class="testi-text">Outbound LDKS bersama Gemilang Katun luar biasa! Siswa kami jadi lebih mandiri
+                        dan punya jiwa kepemimpinan yang kuat. Panitia sangat profesional dan fasilitator berpengalaman.
+                    </p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">B</div>
+                        <div>
+                            <div class="testi-name">Bu Ratna Dewi, S.Pd</div>
+                            <div class="testi-school">Wakasek SMAN 5 Malang</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="testi-quote">"</div>
+                    <p class="testi-text">Program LDKS yang sangat terstruktur dan menyenangkan. Anak didik kami sangat
+                        antusias mengikuti setiap kegiatan. Harga terjangkau, kualitas premium. Recommended banget!</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">A</div>
+                        <div>
+                            <div class="testi-name">Pak Ahmad Fauzi, M.Pd</div>
+                            <div class="testi-school">Waka Kesiswaan SMPN 3 Batu</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="testi-quote">"</div>
+                    <p class="testi-text">Sudah 3 tahun berturut-turut kami mempercayakan kegiatan outbound OSIS kepada
+                        Gemilang Katun. Selalu konsisten, aman, dan memberikan pengalaman terbaik bagi siswa kami.</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">S</div>
+                        <div>
+                            <div class="testi-name">Ibu Sari Wulandari</div>
+                            <div class="testi-school">Pembina OSIS SMKN 2 Malang</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section style="padding: 80px 24px; background: linear-gradient(180deg, var(--bg-dark), var(--bg-mid));">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">❓ FAQ</div>
+                <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+                <p class="section-sub">Temukan jawaban atas pertanyaan umum seputar program outbound LDKS kami</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" id="faq1">
+                    <div class="faq-q" onclick="toggleFaq('faq1')">
+                        Berapa biaya paket outbound LDKS untuk SMP/SMA?
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-a">Biaya paket bervariasi mulai dari Rp 125.000 hingga Rp 250.000 per siswa
+                        tergantung durasi, program, dan jumlah peserta. Semakin banyak peserta, harga semakin
+                        terjangkau. Hubungi kami untuk mendapatkan penawaran terbaik.</div>
+                </div>
+                <div class="faq-item" id="faq2">
+                    <div class="faq-q" onclick="toggleFaq('faq2')">
+                        Berapa minimum peserta untuk satu paket?
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-a">Minimum peserta adalah 30 siswa per paket. Kami melayani kelompok besar hingga
+                        500+ siswa dengan sistem rotasi aktivitas yang terstruktur dan aman.</div>
+                </div>
+                <div class="faq-item" id="faq3">
+                    <div class="faq-q" onclick="toggleFaq('faq3')">
+                        Apakah lokasi outbound bisa dipilih sendiri?
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-a">Ya! Kami memiliki beberapa pilihan lokasi di sekitar Malang dan Batu. Bisa juga
+                        kami datangkan program outbound langsung ke sekolah Anda. Sesuaikan dengan kebutuhan dan
+                        anggaran sekolah.</div>
+                </div>
+                <div class="faq-item" id="faq4">
+                    <div class="faq-q" onclick="toggleFaq('faq4')">
+                        Apakah program LDKS tersertifikasi?
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-a">Program kami dirancang oleh trainer bersertifikat dengan pengalaman lebih dari 8
+                        tahun. Kami juga menyediakan sertifikat keikutsertaan untuk setiap peserta sebagai bukti capaian
+                        program.</div>
+                </div>
+                <div class="faq-item" id="faq5">
+                    <div class="faq-q" onclick="toggleFaq('faq5')">
+                        Bagaimana sistem keamanan selama outbound?
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-a">Keamanan adalah prioritas utama kami. Setiap aktivitas didampingi oleh
+                        fasilitator berpengalaman, menggunakan alat pengaman standar, dan kami memiliki tim P3K yang
+                        selalu siaga selama kegiatan berlangsung.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-inner">
+            <div class="section-badge" style="margin: 0 auto 20px;">🚀 Mulai Sekarang</div>
+            <h2>Siap Wujudkan LDKS yang Berkesan?</h2>
+            <p>Konsultasikan kebutuhan sekolah Anda dengan tim kami. Dapatkan penawaran spesial dan itinerary gratis!
+            </p>
+            <div class="cta-actions">
+                <a href="https://wa.me/6282211221909?text=Halo! Saya ingin konsultasi paket outbound LDKS untuk sekolah kami."
+                    class="btn btn-accent" target="_blank" rel="noopener">💬 Chat WhatsApp Sekarang</a>
+                <a href="about.html" class="btn btn-outline">Lihat Profil Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-brand" style="text-decoration:none;">
+                        <div class="nav-brand-icon">🏕️</div>
+                        <div class="nav-brand-text">
+                            <span>Gemilang Katun Outbound</span>
+                            <span>Outbound & LDKS Malang</span>
+                        </div>
+                    </a>
+                    <p>Penyedia program outbound dan LDKS terpercaya untuk SMP & SMA di Malang. Membentuk generasi muda
+                        yang berkarakter, berjiwa pemimpin, dan siap menghadapi masa depan.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" title="Instagram" aria-label="Instagram">📷</a>
+                        <a href="https://wa.me/6282211221909" class="footer-social-link" title="WhatsApp"
+                            aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+                        <a href="#" class="footer-social-link" title="Facebook" aria-label="Facebook">📘</a>
+                        <a href="#" class="footer-social-link" title="YouTube" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Program</h4>
+                    <ul>
+                        <li><a href="#">Outbound SMP</a></li>
+                        <li><a href="#">LDKS SMA</a></li>
+                        <li><a href="#">Team Building</a></li>
+                        <li><a href="#">Survival Camp</a></li>
+                        <li><a href="#">Gathering Sekolah</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><a href="tel:+6282211221909">📞 0822-1122-1909</a></li>
+                        <li><a href="https://wa.me/6282211221909" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+                        <li><a href="#">📍 Malang, Jawa Timur</a></li>
+                        <li><a href="#">✉️ info@gemilangkatun.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Gemilang Katun Outbound. Dibuat dengan <span>❤️</span> di Malang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/6282211221909?text=Halo! Saya ingin info paket outbound LDKS"
+            class="float-btn float-btn-wa" title="Chat WhatsApp" aria-label="Chat WhatsApp" target="_blank"
+            rel="noopener">💬</a>
+        <button class="float-btn float-btn-top" id="scrollTop" title="Kembali ke atas" aria-label="Kembali ke atas"
+            onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+    </div>
+
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+        });
+
+        // Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+        });
+
+        // FAQ
+        function toggleFaq(id) {
+            const item = document.getElementById(id);
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+    </script>
+</body>
+
+</html>
